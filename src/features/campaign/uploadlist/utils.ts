@@ -1,0 +1,42 @@
+export const contacts = [
+  {
+    email: "michael.leadflux@outlook.com",
+    firstName: "Michael",
+    lastName: "King",
+    job: "CFO",
+    company: "Schlouch Incorporated",
+    website: "schlouch.com",
+  },
+  {
+    email: "sarah.leadflux@outlook.com",
+    firstName: "Sarah",
+    lastName: "Hallquist",
+    job: "Chief Executive Officer",
+    company: "HPM, Inc.",
+    website: "hpmcontracting.com",
+  },
+  {
+    email: "christopher.leadflux@outlook.com",
+    firstName: "Christopher",
+    lastName: "Gerry",
+    job: "Chief Financial Officer",
+    company: "R. P. Marzilli & Company",
+    website: "rpmarzilli.com",
+  },
+  {
+    email: "ashley.leadflux@outlook.com",
+    firstName: "Ashley",
+    lastName: "Powers",
+    job: "Chief Financial Officer",
+    company: "Douglass Colony Group",
+    website: "douglasscolony.com",
+  },
+  {
+    email: "emily.leadflux@outlook.com",
+    firstName: "Emily",
+    lastName: "Hasegawa",
+    job: "Principal, Chief Designer",
+    company: "ELS Architecture and Design",
+    website: "elsarch.com",
+  },
+];

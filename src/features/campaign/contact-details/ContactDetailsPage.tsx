@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -22,69 +21,9 @@ import {
 import RefreshIcon from "@mui/icons-material/Refresh";
 import UploadIcon from "@mui/icons-material/Upload";
 import CloseIcon from "@mui/icons-material/Close";
+import { contacts } from "../uploadlist/utils";
+import StatCard from "./components/StatCard";
 
-/* ---------- Dummy Data ---------- */
-const contacts = [
-  {
-    email: "michael.leadflux@outlook.com",
-    firstName: "Michael",
-    lastName: "King",
-    job: "CFO",
-    company: "Schlouch Incorporated",
-    website: "schlouch.com",
-  },
-  {
-    email: "sarah.leadflux@outlook.com",
-    firstName: "Sarah",
-    lastName: "Hallquist",
-    job: "Chief Executive Officer",
-    company: "HPM, Inc.",
-    website: "hpmcontracting.com",
-  },
-  {
-    email: "christopher.leadflux@outlook.com",
-    firstName: "Christopher",
-    lastName: "Gerry",
-    job: "Chief Financial Officer",
-    company: "R. P. Marzilli & Company",
-    website: "rpmarzilli.com",
-  },
-  {
-    email: "ashley.leadflux@outlook.com",
-    firstName: "Ashley",
-    lastName: "Powers",
-    job: "Chief Financial Officer",
-    company: "Douglass Colony Group",
-    website: "douglasscolony.com",
-  },
-  {
-    email: "emily.leadflux@outlook.com",
-    firstName: "Emily",
-    lastName: "Hasegawa",
-    job: "Principal, Chief Designer",
-    company: "ELS Architecture and Design",
-    website: "elsarch.com",
-  },
-];
-
-/* ---------- Stat Card ---------- */
-const StatCard = ({ label, value, color }: any) => (
-  <Card sx={{ flex: 1, p: 2, textAlign: "center" }}>
-    <Typography variant="body2" color="text.secondary">
-      {label}
-    </Typography>
-    <Typography variant="h5" fontWeight={700} mt={0.5}>
-      {value}
-    </Typography>
-    <Chip
-      label={label.toUpperCase()}
-      size="small"
-      sx={{ mt: 1, bgcolor: color, color: "#fff" }}
-    />
-  </Card>
-);
-
-/* ---------- Page ---------- */
 export default function ContactDetailsPage() {
   const navigate = useNavigate();
 

@@ -41,22 +41,6 @@ const Topbar = () => (
     </Box>
 
     <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-      <Button
-        variant="contained"
-        startIcon={<AddIcon />}
-        sx={{
-          bgcolor: "#4F46E5",
-          borderRadius: 3,
-          textTransform: "none",
-          fontSize: 14,
-          fontWeight: 600,
-          px: 2.5,
-          height: 40,
-        }}
-      >
-        Create
-      </Button>
-
       <IconButton>
         <Badge badgeContent={3} color="error">
           <NotificationsNoneIcon />

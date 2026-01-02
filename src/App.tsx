@@ -3,8 +3,8 @@ import DashboardLayout from "./layout/DashboardLayout";
 import Dashboard from "./features/dashboard/Dashboard";
 import EmailListsDashboard from "./features/campaign/list/EmailLists";
 import UploadEmailListPage from "./features/campaign/uploadlist/UploadEmailList";
-import MapFieldsPage from "./features/campaign/uploadlist/MapFieldsPage";
-import ContactDetailsPage from "./features/campaign/uploadlist/ContactDetailsPage";
+import MapFieldsPage from "./features/campaign/uploadlist/components/StepTwo";
+import ContactDetailsPage from "./features/campaign/contact-details/ContactDetailsPage";
 
 function App() {
   return (

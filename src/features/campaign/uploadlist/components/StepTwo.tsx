@@ -27,7 +27,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import BoltIcon from "@mui/icons-material/Bolt";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-/* ---------------- Mapping Row ---------------- */ interface MappingRowProps {
+interface MappingRowProps {
   csv: string;
   sample: string;
   dest: string;
@@ -36,6 +36,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
   active?: boolean;
   onClick?: () => void;
 }
+
 const MappingRow: React.FC<MappingRowProps> = ({
   csv,
   sample,
@@ -95,11 +96,12 @@ const MappingRow: React.FC<MappingRowProps> = ({
     </Grid>{" "}
   </Card>
 );
-/* ---------------- Page ---------------- */ export default function MapFieldsPage() {
+
+export default function StepTwo() {
   const navigate = useNavigate();
   const [activeRow, setActiveRow] = React.useState<number | null>(0);
   const [page, setPage] = React.useState(1);
-  const [contacts, setContacts] = React.useState<any[]>([]);
+
   const rows = [
     {
       csv: "Email Address",
