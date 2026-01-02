@@ -97,92 +97,93 @@ const MappingRow: React.FC<MappingRowProps> = ({
   </Card>
 );
 
+const rows = [
+  {
+    csv: "Email Address",
+    sample: "Emily.Leadflux@outlook.com",
+    dest: "Email",
+    icon: <EmailIcon fontSize="small" />,
+    required: true,
+  },
+  {
+    csv: "First Name",
+    sample: "Emily",
+    dest: "First Name",
+    icon: <PersonIcon fontSize="small" />,
+  },
+  {
+    csv: "Last Name",
+    sample: "Hasegawa",
+    dest: "Last Name",
+    icon: <PersonIcon fontSize="small" />,
+  },
+  {
+    csv: "Title",
+    sample: "Principal, Chief Design Officer",
+    dest: "Contact Title",
+    icon: <WorkIcon fontSize="small" />,
+  },
+  {
+    csv: "Company Name",
+    sample: "ELS Architecture",
+    dest: "Company Name",
+    icon: <BusinessIcon fontSize="small" />,
+  },
+  {
+    csv: "Website",
+    sample: "elsarch.com",
+    dest: "Website URL",
+    icon: <LanguageIcon fontSize="small" />,
+  },
+  {
+    csv: "Address",
+    sample: "123 Market Street",
+    dest: "Street Address",
+    icon: <HomeIcon fontSize="small" />,
+  },
+  {
+    csv: "City",
+    sample: "San Francisco",
+    dest: "City",
+    icon: <LocationCityIcon fontSize="small" />,
+  },
+  {
+    csv: "State",
+    sample: "California",
+    dest: "State",
+    icon: <PublicIcon fontSize="small" />,
+  },
+  {
+    csv: "Country",
+    sample: "United States",
+    dest: "Country",
+    icon: <PublicIcon fontSize="small" />,
+  },
+  {
+    csv: "Zip Code",
+    sample: "94105",
+    dest: "Postal Code",
+    icon: <LocalPostOfficeIcon fontSize="small" />,
+  },
+  {
+    csv: "Phone",
+    sample: "+1 415 234 5678",
+    dest: "Phone Number",
+    icon: <PhoneIcon fontSize="small" />,
+  },
+  {
+    csv: "Industry",
+    sample: "Architecture",
+    dest: "Industry",
+    icon: <CategoryIcon fontSize="small" />,
+  },
+];
+
 export default function StepTwo() {
   const navigate = useNavigate();
   const [activeRow, setActiveRow] = React.useState<number | null>(0);
   const [page, setPage] = React.useState(1);
 
-  const rows = [
-    {
-      csv: "Email Address",
-      sample: "Emily.Leadflux@outlook.com",
-      dest: "Email",
-      icon: <EmailIcon fontSize="small" />,
-      required: true,
-    },
-    {
-      csv: "First Name",
-      sample: "Emily",
-      dest: "First Name",
-      icon: <PersonIcon fontSize="small" />,
-    },
-    {
-      csv: "Last Name",
-      sample: "Hasegawa",
-      dest: "Last Name",
-      icon: <PersonIcon fontSize="small" />,
-    },
-    {
-      csv: "Title",
-      sample: "Principal, Chief Design Officer",
-      dest: "Contact Title",
-      icon: <WorkIcon fontSize="small" />,
-    },
-    {
-      csv: "Company Name",
-      sample: "ELS Architecture",
-      dest: "Company Name",
-      icon: <BusinessIcon fontSize="small" />,
-    },
-    {
-      csv: "Website",
-      sample: "elsarch.com",
-      dest: "Website URL",
-      icon: <LanguageIcon fontSize="small" />,
-    },
-    {
-      csv: "Address",
-      sample: "123 Market Street",
-      dest: "Street Address",
-      icon: <HomeIcon fontSize="small" />,
-    },
-    {
-      csv: "City",
-      sample: "San Francisco",
-      dest: "City",
-      icon: <LocationCityIcon fontSize="small" />,
-    },
-    {
-      csv: "State",
-      sample: "California",
-      dest: "State",
-      icon: <PublicIcon fontSize="small" />,
-    },
-    {
-      csv: "Country",
-      sample: "United States",
-      dest: "Country",
-      icon: <PublicIcon fontSize="small" />,
-    },
-    {
-      csv: "Zip Code",
-      sample: "94105",
-      dest: "Postal Code",
-      icon: <LocalPostOfficeIcon fontSize="small" />,
-    },
-    {
-      csv: "Phone",
-      sample: "+1 415 234 5678",
-      dest: "Phone Number",
-      icon: <PhoneIcon fontSize="small" />,
-    },
-    {
-      csv: "Industry",
-      sample: "Architecture",
-      dest: "Industry",
-      icon: <CategoryIcon fontSize="small" />,
-    },
-  ];
   return (
     <Grid container spacing={3}>
       {" "}
