@@ -15,7 +15,6 @@ import {
   TableHead,
   TableRow,
   IconButton,
-  Chip,
 } from "@mui/material";
 
 import RefreshIcon from "@mui/icons-material/Refresh";

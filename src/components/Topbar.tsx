@@ -1,14 +1,6 @@
-import {
-  Box,
-  InputBase,
-  Button,
-  Avatar,
-  IconButton,
-  Badge,
-} from "@mui/material";
+import { Box, InputBase, Avatar, IconButton, Badge } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import AddIcon from "@mui/icons-material/Add";
 
 const Topbar = () => (
   <Box

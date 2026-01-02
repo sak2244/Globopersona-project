@@ -9,8 +9,6 @@ import {
 } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import EmailIcon from "@mui/icons-material/Email";
-import PeopleIcon from "@mui/icons-material/People";
-import AnalyticsIcon from "@mui/icons-material/BarChart";
 import { NavLink } from "react-router-dom";
 
 const Sidebar: React.FC = () => {
