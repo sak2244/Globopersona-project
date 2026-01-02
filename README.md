@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Vite React + TypeScript — Campaign Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + TypeScript + Vite project providing a dashboard and email-campaign features (upload, map fields, contact details, lists). Uses Material UI for UI, Chart.js / Recharts for charts, and PapaParse for CSV import.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dashboard with charts and stats
+- Email lists management and CSV upload flow (map fields, preview contacts)
+- Mock data for local development
+- Themed layout with a topbar and sidebar components
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19, TypeScript
+- Vite (dev server, build)
+- @mui/material, @mui/icons-material
+- chart.js, react-chartjs-2, recharts
+- papaparse for CSV parsing
+- ESLint + TypeScript for linting
 
-## Expanding the ESLint configuration
+## Project Structure (highlight)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [src/main.tsx](src/main.tsx) — app entry
+- [src/App.tsx](src/App.tsx) — routes / top-level UI
+- [src/layout/DashboardLayout.tsx](src/layout/DashboardLayout.tsx) — layout wrapper
+- [src/components/Topbar.tsx](src/components/Topbar.tsx) — header
+- [src/components/Sidebar.tsx](src/components/Sidebar.tsx) — navigation
+- [src/features/dashboard/Dashboard.tsx](src/features/dashboard/Dashboard.tsx) — dashboard page
+- [src/features/campaign/list/EmailLists.tsx](src/features/campaign/list/EmailLists.tsx) — lists overview
+- [src/features/campaign/uploadlist/UploadEmailList.tsx](src/features/campaign/uploadlist/UploadEmailList.tsx) — CSV upload flow
+- [src/data/mockData.ts](src/data/mockData.ts) — seeded/mock data
+- [src/theme/theme.ts](src/theme/theme.ts) — MUI theme
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Setup
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Install dependencies
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Run dev server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Preview production build
+
+```bash
+npm run preview
+```
+
+5. Run linter
+
+```bash
+npm run lint
+```
+
+## Development Notes
+
+- CSV import: the upload flow uses papaparse to parse CSVs and shows mapping screens in the upload feature folder.
+- Charts live under features/dashboard and use chart.js and recharts.
+- To change global styling, edit src/theme/theme.ts.
+- Mock data for local dev is in src/data/mockData.ts.
+
+## Where to look for common tasks
+
+- Add routes or pages in App.tsx.
+- New UI components: place in src/components or feature-local components folders.
+- Add unit tests close to changed files (project currently contains no test runner config).
