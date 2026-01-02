@@ -52,10 +52,10 @@ export default function ContactDetailsPage() {
 
       {/* Stats */}
       <Stack direction="row" spacing={2} mb={3}>
-        <StatCard label="Active" value={5} color="#22c55e" />
-        <StatCard label="Unsubscribed" value={0} color="#ef4444" />
-        <StatCard label="Bounced" value={0} color="#facc15" />
-        <StatCard label="Total" value={5} color="#6366f1" />
+        <StatCard label="Active" value={5} color="success.main" />
+        <StatCard label="Unsubscribed" value={0} color="error.main" />
+        <StatCard label="Bounced" value={0} color="warning.main" />
+        <StatCard label="Total" value={5} color="primary.main" />
       </Stack>
 
       {/* Filters */}
